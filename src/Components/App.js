@@ -94,9 +94,7 @@ export default function App() {
   );
   const NumOfQuestions = questions.length;
   useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/Kazi-Irfanul-Islam/React-Quiz-App/main/data/questions.json"
-    )
+    fetch("http://localhost:9000/questions")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch data");
         return res.json();
